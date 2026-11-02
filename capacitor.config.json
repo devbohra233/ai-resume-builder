@@ -1,0 +1,5 @@
+{
+  "appId": "com.example.vitae",
+  "appName": "vitae-client",
+  "webDir": "client/dist"
+}

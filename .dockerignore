@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+client/dist
+server/uploads
+server/.data
+server/.env
+.env
+vibe_images
+.git
+*.log

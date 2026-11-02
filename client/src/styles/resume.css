@@ -1,0 +1,602 @@
+/* A4 resume document styles — shared by editor preview, public pages and PDF export.
+   All colors are explicit hex/rgba so html2canvas-pro can rasterize them reliably. */
+
+.resume-doc {
+  --accent: #1f6f5c;
+  position: relative;
+  width: 794px;
+  min-height: 1123px;
+  background: #ffffff;
+  color: #1d1b16;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+
+.resume-doc h1,
+.resume-doc h2,
+.resume-doc h3,
+.resume-doc p,
+.resume-doc ul,
+.resume-doc li {
+  margin: 0;
+  padding: 0;
+}
+
+.resume-doc ul {
+  list-style: none;
+}
+
+.resume-doc a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.resume-doc .ph {
+  color: #a8a294;
+}
+
+/* ---------- shared entry pieces ---------- */
+
+.resume-doc .rd-sec-title {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.resume-doc .rd-entry {
+  margin-bottom: 15px;
+}
+
+.resume-doc .rd-entry:last-child {
+  margin-bottom: 0;
+}
+
+.resume-doc .rd-entry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.resume-doc .rd-role {
+  font-size: 12.8px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: #1a1813;
+}
+
+.resume-doc .rd-org {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+.resume-doc .rd-meta {
+  font-size: 9.8px;
+  color: #847d6c;
+  white-space: nowrap;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.resume-doc .rd-loc {
+  font-size: 9.5px;
+  color: #938c7b;
+}
+
+.resume-doc .rd-bullets {
+  margin-top: 6px;
+}
+
+.resume-doc .rd-bullets li {
+  position: relative;
+  padding-left: 13px;
+  margin-bottom: 3.5px;
+  font-size: 11.8px;
+  line-height: 1.55;
+  color: #38342c;
+}
+
+.resume-doc .rd-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.resume-doc .rd-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 1.5px;
+  top: 0.64em;
+  width: 5px;
+  height: 1.5px;
+  background: var(--accent);
+}
+
+.resume-doc .rd-link {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ====================================================================
+   TEMPLATE 1 — MINIMAL (editorial serif)
+   ==================================================================== */
+
+.tpl-minimal {
+  padding: 58px 66px 54px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.tpl-minimal .min-head {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd6c7;
+  margin-bottom: 26px;
+}
+
+.tpl-minimal .min-name {
+  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #17150f;
+}
+
+.tpl-minimal .min-role {
+  margin-top: 8px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 9.6px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.tpl-minimal .min-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px 16px;
+  margin-top: 13px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 9.8px;
+  color: #5d5749;
+}
+
+.tpl-minimal .min-section {
+  margin-bottom: 23px;
+}
+
+.tpl-minimal .min-section:last-child {
+  margin-bottom: 0;
+}
+
+.tpl-minimal .min-sec-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 9.2px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #403c32;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e6e0d2;
+  margin-bottom: 13px;
+}
+
+.tpl-minimal .min-sec-title::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  display: block;
+  flex: 0 0 auto;
+}
+
+.tpl-minimal .min-summary {
+  font-size: 12.8px;
+  line-height: 1.68;
+  color: #332f27;
+}
+
+.tpl-minimal .rd-role,
+.tpl-minimal .rd-org {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.tpl-minimal .min-skill-line {
+  font-size: 12px;
+  line-height: 1.75;
+  color: #332f27;
+}
+
+.tpl-minimal .min-skill-line span + span::before {
+  content: " · ";
+  color: var(--accent);
+}
+
+.tpl-minimal .rd-bullets li {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11.4px;
+  color: #3a362d;
+}
+
+.tpl-minimal .min-inline-extra {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10.2px;
+  color: #847d6c;
+  margin-top: 2px;
+}
+
+/* ====================================================================
+   TEMPLATE 2 — MODERN (accent sidebar)
+   ==================================================================== */
+
+.tpl-modern {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+}
+
+.tpl-modern .mod-side {
+  width: 254px;
+  flex: 0 0 254px;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 42px 27px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tpl-modern .mod-side.light {
+  color: #16302a;
+}
+
+.tpl-modern .mod-photo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.tpl-modern .mod-side.light .mod-photo {
+  border-color: rgba(20, 48, 42, 0.18);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.tpl-modern .mod-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tpl-modern .mod-initials {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.tpl-modern .mod-identity {
+  text-align: center;
+}
+
+.tpl-modern .mod-name {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 31px;
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+.tpl-modern .mod-role {
+  margin-top: 7px;
+  font-size: 8.8px;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.tpl-modern .mod-block-title {
+  font-size: 8.6px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  padding-bottom: 6px;
+  margin-bottom: 9px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.tpl-modern .mod-side.light .mod-block-title {
+  border-bottom-color: rgba(20, 48, 42, 0.2);
+}
+
+.tpl-modern .mod-contact li {
+  font-size: 10px;
+  line-height: 1.45;
+  margin-bottom: 6px;
+  word-break: break-word;
+  opacity: 0.94;
+}
+
+.tpl-modern .mod-contact li:last-child {
+  margin-bottom: 0;
+}
+
+.tpl-modern .mod-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tpl-modern .mod-chip {
+  display: inline-block;
+  padding: 3px 7px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 9.2px;
+  line-height: 1.35;
+}
+
+.tpl-modern .mod-side.light .mod-chip {
+  border-color: rgba(20, 48, 42, 0.22);
+}
+
+.tpl-modern .mod-pair {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.tpl-modern .mod-pair span:last-child {
+  opacity: 0.78;
+}
+
+.tpl-modern .mod-main {
+  flex: 1;
+  padding: 48px 40px 44px 38px;
+  min-width: 0;
+}
+
+.tpl-modern .mod-summary {
+  font-size: 12.3px;
+  line-height: 1.65;
+  color: #3a362e;
+  border-left: 2px solid var(--accent);
+  padding-left: 13px;
+  margin-bottom: 26px;
+}
+
+.tpl-modern .mod-section {
+  margin-bottom: 22px;
+}
+
+.tpl-modern .mod-section:last-child {
+  margin-bottom: 0;
+}
+
+.tpl-modern .mod-sec-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 9.4px;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: #2a271f;
+  margin-bottom: 13px;
+}
+
+.tpl-modern .mod-sec-title::before {
+  content: "";
+  width: 14px;
+  height: 3px;
+  background: var(--accent);
+  display: block;
+  flex: 0 0 auto;
+}
+
+.tpl-modern .mod-sec-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e7e1d2;
+}
+
+.tpl-modern .rd-bullets li {
+  font-size: 11.4px;
+}
+
+.tpl-modern .mod-edu {
+  margin-bottom: 12px;
+}
+
+.tpl-modern .mod-edu:last-child {
+  margin-bottom: 0;
+}
+
+.tpl-modern .mod-detail {
+  font-size: 10px;
+  color: #7d7666;
+  margin-top: 2px;
+}
+
+.tpl-modern .mod-project-tech {
+  font-size: 9.6px;
+  color: #8a8372;
+  margin-top: 2px;
+}
+
+/* ====================================================================
+   TEMPLATE 3 — COMPACT (dense, ATS-first)
+   ==================================================================== */
+
+.tpl-compact {
+  padding: 44px 50px 42px;
+  font-size: 11.8px;
+}
+
+.tpl-compact .cmp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 18px;
+}
+
+.tpl-compact .cmp-name {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 400;
+  color: #17150f;
+}
+
+.tpl-compact .cmp-role {
+  margin-top: 6px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.tpl-compact .cmp-contact {
+  text-align: right;
+  font-size: 9.3px;
+  line-height: 1.65;
+  color: #6c6657;
+}
+
+.tpl-compact .cmp-section {
+  margin-bottom: 16px;
+}
+
+.tpl-compact .cmp-section:last-child {
+  margin-bottom: 0;
+}
+
+.tpl-compact .cmp-title {
+  background: #f4f1e8;
+  border-left: 3px solid var(--accent);
+  padding: 4px 9px;
+  font-size: 8.8px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2c2921;
+  margin-bottom: 9px;
+}
+
+.tpl-compact .cmp-summary {
+  font-size: 11.4px;
+  line-height: 1.6;
+  color: #3a362d;
+}
+
+.tpl-compact .cmp-entry {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.tpl-compact .cmp-entry:last-child {
+  margin-bottom: 0;
+}
+
+.tpl-compact .cmp-side {
+  font-size: 9.2px;
+  line-height: 1.5;
+  color: #7c7564;
+  padding-top: 2px;
+}
+
+.tpl-compact .cmp-side strong {
+  display: block;
+  font-weight: 600;
+  color: #5e584a;
+}
+
+.tpl-compact .rd-role {
+  font-size: 12px;
+}
+
+.tpl-compact .rd-org {
+  font-size: 10.8px;
+  margin-top: 0;
+}
+
+.tpl-compact .rd-bullets {
+  margin-top: 4px;
+}
+
+.tpl-compact .rd-bullets li {
+  font-size: 10.9px;
+  line-height: 1.5;
+  margin-bottom: 2.5px;
+}
+
+.tpl-compact .cmp-skills {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #38342c;
+}
+
+.tpl-compact .cmp-skills span + span::before {
+  content: " · ";
+  color: var(--accent);
+}
+
+.tpl-compact .cmp-edu {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
+  margin-bottom: 7px;
+  font-size: 11px;
+}
+
+.tpl-compact .cmp-edu:last-child {
+  margin-bottom: 0;
+}
+
+.tpl-compact .cmp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 26px;
+}
+
+.tpl-compact .cmp-cert {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10.5px;
+  margin-bottom: 4px;
+  color: #38342c;
+}
+
+.tpl-compact .cmp-cert span:last-child {
+  color: #8a8372;
+  font-size: 9.5px;
+  white-space: nowrap;
+}
